@@ -8,15 +8,14 @@ Create a Django website with five users. Two users are to be staff users (includ
 
 # Design Procedure:
 
-## Step 1: 
-Create a Django Project by
+## Step 1: Create a Django Projet
+Create a Django Project 
 django-admin startproject myproject
-## Step 2: 
+## Step 2: Create a Django App
 Create a Django app within your project using the following command:
 cd myproject
 python manage.py startapp myapp
-## Step 3: 
-Define User Creation View
+## Step 3: Define User Creation View
 
 In your app's views.py file (myapp/views.py), define a view function to create the users with the specified attributes.
 
@@ -63,7 +62,7 @@ def create_users(request):
     return render(request, ' myfirstapp/user_creation_success.html')
 ```
 
-## Step 4: 
+## Step 4: Create Templates
 Create a template directory within your app (myapp/templates) if it doesn't already exist. Inside this directory, create a template named 'user_creation_success.html' to display a success message.
 ```html
 <html>
@@ -75,8 +74,7 @@ Create a template directory within your app (myapp/templates) if it doesn't alre
 </html>
 ```
 
-## Step 5:
-Define URL Pattern
+## Step 5:Define URL Pattern
 
 In your app's urls.py file (myapp/urls.py), define a URL pattern to route to the create_users view.
 ```python
@@ -93,20 +91,20 @@ urlpatterns = [
 ]
 
 ```
-## Step 6: 
+## Step 6: Apply Migrations
 Apply migrations to create the necessary database tables for the User model.
     python manage.py makemigrations
     python manage.py migrate
 
-## Step 7:
+## Step 7: Run the Development Server
 Start the development server to run your Django application.
 python manage.py runserver
 
-## Step 8:
+## Step 8: Access the User Creation View
 Access the User Creation View by
 Visit http://localhost:8000/create_users/ in your web browser to execute the create_users view and create the users.
 
-## Step 9:
+## Step 9: Veriy the Users
 You can verify that the users have been created with the specified attributes by checking the Django admin interface.
 
 
