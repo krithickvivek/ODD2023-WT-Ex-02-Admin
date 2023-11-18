@@ -1,10 +1,16 @@
-# Ex-02-Admin
+# Ex-03-Admin User using function-based views
 NAME:Krithick Vivekananda
 REF.NO:23009445
 
 # AIM:
 Create a Django website with five users. Two users are to be staff users (including admin) and the other three users are non-staff users.
+1. Creating five users
 
+2. Two staff users and three non-staff users
+
+3. Setting e-mail for all users
+
+4. Setting the first name and last name for all users.
 
 # Design Procedure:
 
