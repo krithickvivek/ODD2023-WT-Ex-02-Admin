@@ -1,4 +1,4 @@
-# Ex-03-Admin User using function-based views
+# Ex-02-Admin User using function-based views
 NAME:Krithick Vivekananda
 REF.NO:23009445
 
@@ -22,51 +22,7 @@ Create a Django app within your project using the following command:
 cd myproject
 python manage.py startapp myapp
 ## Step 3: Define User Creation View
-
 In your app's views.py file (myapp/views.py), define a view function to create the users with the specified attributes.
-
-To create a Django website with five users (two staff users, including an admin, and three non-staff users), set email, first name, and last name for all users, you can use the following Python view function:
-```python
-from django.contrib.auth.models import User
-from django.views import View
-from django.shortcuts import render
-
-def create_users(request):
-    admin_user=User.objects.create_user(username='admin',password='adminpass')
-    admin_user.is_staff = True
-    admin_user.is_superuser = True
-    admin_user.email = 'admin@example.com'
-    admin_user.first_name = 'Admin'
-    admin_user.last_name = 'User'
-    admin_user.save()
-
-    staff_user1 = User.objects.create_user(username='staff1',password='staffipass')
-    staff_user1.is_staff = True
-    staff_user1.email = 'staff1@example.com'
-    staff_user1.first_name ='Staff'
-    staff_user1.last_name ='User1'
-    staff_user1.save()
-
-    user1 = User.objects.create_user(username='user1',password='user1pass')
-    user1.email='user1@example.com'
-    user1.first_name='User'
-    user1.last_name='One'
-    user1.save()
-
-    user2 = User.objects.create_user(username='user2',password='user12pass')
-    user2.email='user2@example.com'
-    user2.first_name='User'
-    user2.last_name='Two'
-    user2.save()
-
-    user3 = User.objects.create_user(username='user3',password='user3pass')
-    user3.email='user3@example.com'
-    user3.first_name='User'
-    user3.last_name='Three'
-    user3.save()
-
-    return render(request, ' myfirstapp/user_creation_success.html')
-```
 
 ## Step 4: Create Templates
 Create a template directory within your app (myapp/templates) if it doesn't already exist. Inside this directory, create a template named 'user_creation_success.html' to display a success message.
@@ -81,7 +37,6 @@ Create a template directory within your app (myapp/templates) if it doesn't alre
 ```
 
 ## Step 5:Define URL Pattern
-
 In your app's urls.py file (myapp/urls.py), define a URL pattern to route to the create_users view.
 ```python
 from django.contrib import admin
