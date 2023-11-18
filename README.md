@@ -1,4 +1,4 @@
-# Ex-02-Admin User using function-based views
+# Ex-02-Admin User
 NAME:Krithick Vivekananda
 REF.NO:23009445
 
